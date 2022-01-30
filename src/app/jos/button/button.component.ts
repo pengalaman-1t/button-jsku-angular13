@@ -1,4 +1,3 @@
-import { getLocaleMonthNames } from '@angular/common';
 import { Component, OnInit, inject, Inject } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
