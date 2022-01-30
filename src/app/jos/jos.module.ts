@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { JosRoutingModule } from './jos-routing.module';
 import { ButtonComponent, ButtonComponentDialog } from './button/button.component';
 import { HomeComponent } from './home/home.component';
 import {MaterialModule} from '../shared/material.module';
+import {CdkTableModule} from '@angular/cdk/table';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import {MaterialModule} from '../shared/material.module';
   ],
   imports: [
     CommonModule,
-    JosRoutingModule,MaterialModule
-  ]
+    JosRoutingModule,MaterialModule,CdkTableModule
+  ],
+
 })
 export class JosModule { }

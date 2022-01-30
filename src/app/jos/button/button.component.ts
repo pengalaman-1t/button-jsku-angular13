@@ -9,8 +9,19 @@ import {MAT_DIALOG_DATA} from '@angular/material/dialog';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent  {
+  lahBos;
+  okLur;
+  constructor(private dialog: MatDialog) {
+   this.lahBos = 'Ok BOS';
+  
+   const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+   let text = "";
+   for (let i = 0; i < cars.length; i++) {
+    text += cars[i]+' ';
+    this.okLur = text
+   }  
+}
 
-  constructor(public dialog: MatDialog) {}
 
   openDialog() {
     this.dialog.open(ButtonComponentDialog,{
@@ -32,7 +43,7 @@ export class ButtonComponentDialog implements OnInit{
   ketName;
   hasilNya;
 
-  constructor(@Inject(MAT_DIALOG_DATA)public data:any) {
+  constructor(@Inject(MAT_DIALOG_DATA)private data:any) {
   this.lastName = data.name
   this.ketName = data.keterangan
 
@@ -49,3 +60,4 @@ export class ButtonComponentDialog implements OnInit{
   ngOnInit(): void {
  }
 }
+
