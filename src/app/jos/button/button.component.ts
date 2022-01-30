@@ -45,10 +45,8 @@ export class ButtonComponentDialog implements OnInit{
   }else {
   this.hasilNya = "Salah"
   }
-
-  }
+}
  
   ngOnInit(): void {
-      
-  }
+ }
 }
