@@ -18,7 +18,8 @@ export class ButtonComponent  {
   openDialog() {
     this.dialog.open(ButtonComponentDialog,{
       data : {
-        name : 'Pengalaman IT'
+        name : 'Pengalaman IT',
+        keterangan : 'Rahma Syndu Grananta'
       }
     });
   }
@@ -32,8 +33,10 @@ export class ButtonComponent  {
 
 export class ButtonComponentDialog implements OnInit{
   lastName;
+  ketName;
   constructor(@Inject(MAT_DIALOG_DATA)public data:any) {
   this.lastName = data.name
+  this.ketName = data.keterangan
 
   }
 
