@@ -1,3 +1,4 @@
+import { getLocaleMonthNames } from '@angular/common';
 import { Component, OnInit, inject, Inject } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
@@ -30,12 +31,23 @@ export class ButtonComponent  {
 export class ButtonComponentDialog implements OnInit{
   lastName;
   ketName;
+  hasilNya;
+
   constructor(@Inject(MAT_DIALOG_DATA)public data:any) {
   this.lastName = data.name
   this.ketName = data.keterangan
 
+  // simple statement 
+  const namasaya = 'Rahma Syndu Grananta';
+  if (this.ketName == namasaya)
+  {      
+    this.hasilNya = "Benar"
+  }else {
+  this.hasilNya = "Salah"
   }
 
+  }
+ 
   ngOnInit(): void {
       
   }
