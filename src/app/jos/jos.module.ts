@@ -6,18 +6,26 @@ import { HomeComponent } from './home/home.component';
 import {MaterialModule} from '../shared/material.module';
 import {CdkTableModule} from '@angular/cdk/table';
 import { TablekuComponent } from './tableku/tableku.component';
+import { ApikuComponent } from './apiku/apiku.component';
 
+import { BrowserModule } from '@angular/platform-browser';
+import { DataTablesModule } from 'angular-datatables';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     ButtonComponent,
     HomeComponent,
     ButtonComponentDialog,
-    TablekuComponent
+    TablekuComponent,
+    ApikuComponent
   ],
   imports: [
     CommonModule,
-    JosRoutingModule,MaterialModule,CdkTableModule
+    JosRoutingModule,MaterialModule,CdkTableModule,
+    BrowserModule,
+    DataTablesModule,
+    HttpClientModule
   ],
 
 })
