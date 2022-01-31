@@ -2,7 +2,6 @@ import { Component, OnInit, inject, Inject } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 
-
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
@@ -13,11 +12,11 @@ export class ButtonComponent  {
   okLur;
   constructor(private dialog: MatDialog) {
    this.lahBos = 'Ok BOS';
-  
+   
    const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
    let text = "";
    for (let i = 0; i < cars.length; i++) {
-    text += cars[i]+' ';
+    text += cars[i] + ' ';
     this.okLur = text
    }  
 }

@@ -5,12 +5,15 @@ import { ButtonComponent, ButtonComponentDialog } from './button/button.componen
 import { HomeComponent } from './home/home.component';
 import {MaterialModule} from '../shared/material.module';
 import {CdkTableModule} from '@angular/cdk/table';
+import { TablekuComponent } from './tableku/tableku.component';
+
 
 @NgModule({
   declarations: [
     ButtonComponent,
     HomeComponent,
-    ButtonComponentDialog
+    ButtonComponentDialog,
+    TablekuComponent
   ],
   imports: [
     CommonModule,
